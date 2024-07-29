@@ -1,7 +1,6 @@
--- 코드를 입력하세요
-SELECT
+SELECT 
     USER_ID,PRODUCT_ID
-from ONLINE_SALE
-group by USER_ID,PRODUCT_ID
-having count(*)>=2
-order by USER_ID, PRODUCT_ID desc
+FROM ONLINE_SALE
+GROUP BY USER_ID,PRODUCT_ID
+HAVING COUNT(*) >= 2 --구매한 횟수가 2회 이상인 경우 조건절으로 표현 
+ORDER BY USER_ID ,PRODUCT_ID DESC;
