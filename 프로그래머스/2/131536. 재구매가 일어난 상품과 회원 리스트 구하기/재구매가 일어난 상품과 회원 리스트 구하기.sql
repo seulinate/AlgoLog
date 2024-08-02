@@ -1,6 +1,7 @@
-SELECT 
+-- 코드를 입력하세요
+SELECT
     USER_ID,PRODUCT_ID
-FROM ONLINE_SALE
-GROUP BY USER_ID,PRODUCT_ID
-HAVING COUNT(*) >= 2 --구매한 횟수가 2회 이상인 경우 조건절으로 표현 
-ORDER BY USER_ID ,PRODUCT_ID DESC;
+from ONLINE_SALE
+group by USER_ID,PRODUCT_ID
+having count(*)>=2  #재구매한 회원이니까 위에서 만든 그룹에 대한 조건임 
+order by USER_ID, PRODUCT_ID desc;
