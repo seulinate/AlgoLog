@@ -3,4 +3,4 @@ SELECT
     price as max_price
 from product
 order by price desc
-LIMIT 1;
+fetch first row only;
