@@ -1,0 +1,3 @@
+SELECT 
+    MAX(DATETIME) as '시간'
+FROM ANIMAL_INS
