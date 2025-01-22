@@ -5,24 +5,25 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         while (true) {
-            int n = sc.nextInt(); 
-            if (n == 0) break;
+            int n = sc.nextInt();
+            if (n == 0) break; 
 
-            sc.nextLine();
-            String[] words = new String[n];
+            sc.nextLine(); 
+            String[] originalWords = new String[n]; 
+            String[] lowerCaseWords = new String[n]; 
 
-            
             for (int i = 0; i < n; i++) {
-                words[i] = sc.nextLine();
+                originalWords[i] = sc.nextLine();
+                lowerCaseWords[i] = originalWords[i].toLowerCase(); 
             }
 
-            String smallestWord = words[0];
+            int index = 0;
             for (int i = 1; i < n; i++) {
-                if (words[i].compareToIgnoreCase(smallestWord) < 0) {
-                    smallestWord = words[i];
+                if (lowerCaseWords[i].compareTo(lowerCaseWords[index]) < 0) {
+                    index = i; 
                 }
             }
-            System.out.println(smallestWord);
+            System.out.println(originalWords[index]);
         }
         sc.close();
     }
